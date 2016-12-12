@@ -1,0 +1,148 @@
+<div class="container home-view">
+    <h1 class="text-center">Buy in bulk to save money with our ad packs</h1>
+    <p>
+        When you purchase a job ad with SEEK you not only get a 30 day listing on Australia's #1 online job site,
+        you also get free access to our Advertiser Centre and 1,000 credits to search for that elusive candidate on Talent Search.
+    </p>
+
+    <div class="row adtabs">
+        <div class="col-sm-4">
+            <a href="javascript:void(0);" title="Classic Ad" class="classic" ng-click="controller.setAd(0)" ng-class="{ 'active': controller.currentAd === 0 }">
+                Classic Ad
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <a href="javascript:void(0);" title="Premium Ad" class="premium recommend" ng-click="controller.setAd(1)" ng-class="{ 'active': controller.currentAd === 1 }">
+                <span class="highlight">Recommended</span>
+                Premium Ad
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <a href="javascript:void(0);" title="Standout Ad" class="standout" ng-click="controller.setAd(2)" ng-class="{ 'active': controller.currentAd === 2 }">
+                Standout Ad
+            </a>
+        </div>
+    </div>
+    <div class="details">
+        <div ng-if="controller.currentAd === 0">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3>Choose this ad to access Australia's largest employment marketplace and place the right candidate faster.</h3>
+                    <ul>
+                        <li>
+                            30 days on site allowing you to make unlimited changes
+                        </li>
+                        <li>
+                            Matched to relevant candidates via email
+                        </li>
+                        <li>
+                            Appears across mobile, desktop and tablet devices
+                        </li>
+                        <li>
+                            Access to proactively find profiles on SEEK Talent Search
+                        </li>
+                        <li>
+                            Free candidate management tools
+                        </li>
+                    </ul>
+                    <div class="cost">
+                        $269.99
+                    </div>
+                    <button class="buy btn btn-success" ng-click="controller.addToCart(controller.products[0])">Add to cart</button>
+                    <a href="javascript:void(0)" ng-click="controller.viewCart()" class="pull-right" title="View Cart">View cart ({{controller.cartCount}})</a>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <img src="assets/img/classic-full.png" alt="Classic ad image" />
+
+                </div>
+            </div>
+        </div>
+        <div ng-if="controller.currentAd === 1">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3>Get all the benefits of a Standout ad, as well as promoting your brand above your competitors.</h3>
+                    <ul>
+                        <li>
+                            30 days on site allowing you to make unlimited changes
+                        </li>
+                        <li>
+                            Matched to relevant candidates via email
+                        </li>
+                        <li>
+                            Appears across mobile, desktop and tablet devices
+                        </li>
+                        <li>
+                            Access to proactively find profiles on SEEK Talent Search
+                        </li>
+                        <li>
+                            Free candidate management tools
+                        </li>
+                        <li>
+                            Company logo to promote your brand
+                        </li>
+                        <li>
+                            Additional 3 selling points to sell your role
+                        </li>
+                        <li>
+                            Bold, eye-catching border
+                        </li>
+                        <li>
+                            Appear above your competitors allowing for higher visibility
+                        </li>
+                    </ul>
+                    <div class="cost">
+                        $394.99
+                    </div>
+                    <button class="buy btn btn-success" ng-click="controller.addToCart(controller.products[1])">Add to cart</button>
+                    <a href="javascript:void(0)" ng-click="controller.viewCart()" class="pull-right" title="View Cart">View cart ({{controller.cartCount}})</a>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <img src="/assets/img/premium-full.png" alt="Standout ad image" />
+
+                </div>
+            </div>
+        </div>
+        <div ng-if="controller.currentAd === 2">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3>Get all the benefits of a Classic ad, as well as promoting your brand, front and centre.</h3>
+                    <ul>
+                        <li>
+                            30 days on site allowing you to make unlimited changes
+                        </li>
+                        <li>
+                            Matched to relevant candidates via email
+                        </li>
+                        <li>
+                            Appears across mobile, desktop and tablet devices
+                        </li>
+                        <li>
+                            Access to proactively find profiles on SEEK Talent Search
+                        </li>
+                        <li>
+                            Free candidate management tools
+                        </li>
+                        <li>
+                            Company logo to promote your brand
+                        </li>
+                        <li>
+                            Additional 3 selling points to sell your role
+                        </li>
+                        <li>
+                            Bold, eye-catching border
+                        </li>
+                    </ul>
+                    <div class="cost">
+                        $322.99
+                    </div>
+                    <button class="buy btn btn-success" ng-click="controller.addToCart(controller.products[2])">Add to cart</button>
+                    <a href="javascript:void(0)" ng-click="controller.viewCart()" class="pull-right" title="View Cart">View cart ({{controller.cartCount}})</a>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <img src="/assets/img/standout-full.png" alt="Standout ad image" />
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

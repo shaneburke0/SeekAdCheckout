@@ -1,0 +1,49 @@
+@color-mask-bg: #000;
+@color-popup-bg: #fff;
+@color-popup-shadow: #888;
+
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: @color-mask-bg;
+    opacity: 0.5;
+    z-index: 100;
+}
+
+.profiles-popup {
+    position: fixed;
+    top: 19%;
+    right: 45%;
+    min-width: 280px;
+    min-height: 200px;
+    padding: 10px;
+    z-index: 500;
+    background-color: @color-popup-bg;
+    box-shadow: 1px 1px 60px @color-popup-shadow;
+
+    .item {
+        margin: 15px 0;
+    }
+
+    .name {
+        min-width: 100px;
+        display: inline-block;
+    }
+
+    .form-control {
+        width: 150px;
+        display: inline-block;
+    }
+
+    .glyphicon-remove {
+        display: block;
+        font-size: 20px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

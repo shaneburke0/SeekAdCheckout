@@ -1,0 +1,29 @@
+<div class="container cart-view">
+    <div ng-if="controller.products.count === 0">
+        <h1 class="text-center" >Your cart is empty</h1>
+        <p class="text-center">
+            Choose the ads you want <a href="/#/">here</a>.
+        </p>
+    </div>
+    <div ng-if="controller.products.count > 0">
+        <h1 class="text-center">
+            See your cart items below</h1>
+        <div class="spacer"></div>
+        <div ng-repeat="(key, value) in controller.products.items" class="row">
+            <div class="col-sm-4">
+                <img ng-src="/assets/img/{{key}}.png" alt="{{value.name}}" />
+            </div>
+            <div class="col-sm-4">
+                <h3>{{value.name}} <span class="count">x {{value.quantity}}</span></h3>
+                <p>
+                    {{value.summary}}
+                </p>
+            </div>
+            <div class="col-sm-4 price">
+                ${{value.price}}
+            </div>
+        </div>
+        <h3 class="text-right">${{controller.products.total}}</h3>
+        <button class="btn btn-success pull-right" ng-click="controller.checkout()">Checkout</button>
+    </div>
+</div>

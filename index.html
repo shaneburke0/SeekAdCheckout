@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-csp ng-app="SeekAdsApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link type="text/css" rel="stylesheet" href="/dist/styles/template.min.css" />
+    <link type="text/css" rel="stylesheet" href="/dist/styles/app.min.css" />
+    <title>Seek Ads</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/#/" title="SEEK">
+                <img src="/assets/img/seek-logo.svg" alt="SEEK Logo" />
+            </a>
+            <span class="pull-right">
+                <profile></profile>
+            </span>
+        </div>
+    </header>
+    <div id="content" ng-view></div>
+    <!-- Libraries -->
+    <script src="/dist/scripts/vendor.jquery.js" type="text/javascript"></script>
+    <script src="/dist/scripts/vendor.angular.js" type="text/javascript"></script>
+    <script src="/dist/scripts/vendor.angular.addons.js" type="text/javascript"></script>
+    <script src="/dist/scripts/vendor.bootstrap.js" type="text/javascript"></script>
+    <script src="/dist/scripts/vendor.other.js" type="text/javascript"></script>
+    <script src="/dist/scripts/app.js" type="text/javascript"></script>
+</body>
+</html>

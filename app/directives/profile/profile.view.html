@@ -1,0 +1,31 @@
+<span ng-if="!user">
+    <a href="javascript:void(0);" title="login" ng-click="showLogin()">Login</a>
+</span>
+<span ng-if="user">
+    <cart></cart>
+    {{user.name}}
+</span>
+
+<div ng-if="showProfiles">
+    <div class="mask">
+        
+    </div>
+    <div class="profiles-popup">
+        <i class="glyphicon glyphicon-remove pull-right" ng-click="close()"></i>
+        <h4>Please choose a profile</h4>
+        <div class="item" ng-repeat="p in profiles track by $index">
+            <span class="name">
+                {{p.name}}
+            </span>
+            <button class="btn btn-success pull-right" ng-click="login(p)">Login</button>
+        </div>
+        <h4>Create new profile</h4>
+        <div class="item">
+            <form name="new-profile" ng-submit="createProfile(newProfileName)">
+                <input type="text" ng-model="newProfileName" placeholder="Profile name" class="form-control" required />
+                <input type="submit" class="btn btn-primary pull-right" value="create" />
+            </form>
+
+        </div>
+    </div>
+</div>
